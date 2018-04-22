@@ -1,0 +1,20 @@
+Date: 24 Jun 2012
+Categories: development
+Summary: With *curl* i can obtain the temperature from Meteo Galicia.
+Read more: Show me more
+
+# How to know the outside temperature
+
+From this web [meteogalicia] i can know the weather:
+
+![Meteo Screenshot]
+
+If I only want see the degrees i use commands: *curl*, *grep* see and *awk*.
+
+![Curl Screenshot]
+
+	curl --silent --data "idEst=10115&tiporede=automaticas&idprov=2" http://www2.meteogalicia.es/galego/observacion/estacions/contidos/datosxeralestacion.asp | grep -m 1 "deg" | awk '{print $2}' | sed 's/class="negro">//' | sed 's/\&deg;<\/span><\/td>//g'
+
+[Meteo Screenshot]: /attachments/meteo.png "Meteo Screenshot]"
+[meteogalicia]: http://www.meteogalicia.es/
+[Curl Screenshot]: /attachments/curl_command.png "Curl Screenshot"

@@ -1,0 +1,112 @@
+Date: 22 Jun 2015
+Categories: systems
+Summary: How to compiling PHP
+Read more: Show me more
+
+# Compiling PHP 5.6.10
+
+In a Debian 8 machine base.
+
+<pre><code>cd /usr/local/src
+wget http://au1.php.net/get/php-5.6.10.tar.gz/from/this/mirror -O php-5.6.10.tar.gz
+tar -xzvf php-5.6.10.tar.gz
+cd php-5.6.10
+</code></pre>
+
+Now if you write "./configure" You will see:
+
+<pre><code>configure: error: no acceptable C compiler found in $PATH
+</code></pre>
+
+First install build essential.
+
+<pre><code>apt-get install -y build-essential
+</code></pre>
+
+Write again "./configure". This error:
+
+<pre><code>configure: error: xml2-config not found. Please check your libxml2 installation.
+</code></pre>
+
+Installing libxml2-dev
+
+<pre><code>apt-get install -y libxml2-dev
+</code></pre>
+
+Write "./configure" and now you can do "make".
+
+If you need help about configure options then.
+
+<pre><code>./configure --help
+</code></pre>
+
+Let's configure with option PHP-FPM enabled.
+
+<pre><code>./configure --enable-fpm
+</code></pre>
+
+And now:
+
+<pre><code>make
+make install
+</code></pre>
+
+You can have a cup of tea :-)
+
+Ok. Let's try it. First install Nginx.
+
+<pre><code>apt-get install -y nginx
+</code></pre>
+
+When finish if You go to http://here_your_ip/ you will see default Nginx Page.
+
+Execute:
+
+<pre><code>php-fpm
+</code></pre>
+
+This It'll be the error:
+
+<pre><code>ERROR: failed to load configuration file '/usr/local/etc/php-fpm.conf'
+</code></pre>
+
+Copy default file.
+
+<pre><code>cp /usr/local/src/php-5.6.10/sapi/fpm/php-fpm.conf /usr/local/etc/php-fpm.conf
+</code></pre>
+
+And change 'nobody' to 'www-data'.
+
+<pre><code>user = www-data
+group = www-data
+</code></pre>
+
+Execute again php-fpm.
+
+Now in 'default' site in Nginx (/etc/nginx/sites-enabled/default) uncomment PHP zone.
+
+<pre><code>location ~ \.php$ {
+  include snippets/fastcgi-php.conf;
+  fastcgi_pass 127.0.0.1:9000;
+}
+</code></pre>
+
+Create this file '/usr/share/nginx/html/test.php' with this content:
+
+<pre><code>&lt;?php
+phpinfo();
+?&gt;
+</code></pre>
+
+Reload Nginx configuration:
+
+<pre><code>nginx -s reload
+</code></pre>
+
+Now if you go to http://here_your_ip/test.php
+
+![it_works]
+
+[it_works]: /attachments/php5610.png "Koa.js It works"
+
+

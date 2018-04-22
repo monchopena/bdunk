@@ -1,0 +1,42 @@
+Date: 15 Apr 2014
+Categories: systems, nodejs
+Summary: Testing Koa.js
+Read more: Show me more
+
+# Testing new Node.js Framework called Koa.js
+
+In late twenty thirteen, the team behind [Express.js][expressjs_web] announced a new framework called [Koa][koa_web]. It uses some features that require an unstable dev version of Node.
+
+Let's try it!
+First we'll install node version 0.11.11 Unstable.
+
+[http://blog.nodejs.org/2014/01/28/node-v0-11-11-unstable/][node_download]
+
+
+<pre><code>wget http://nodejs.org/dist/v0.11.11/node-v0.11.11.tar.gz
+tar -xzvf node-v0.11.11.tar.gz
+cd node-v0.11.11
+apt-get install build-essential
+./configure
+make and make install
+node -v
+</code></pre>
+
+Now we'll clone an example of Koa.
+
+<pre><code>clone https://github.com/node-modules/koa-ejs.git
+cd koa-ejs/example
+npm install
+node --harmony app.js
+</code></pre>
+
+Go to localhost:7001 and It works.
+
+![it_works]
+
+In a future article we'll delve more into this framework.
+
+[expressjs_web]: http://expressjs.com/
+[koa_web]: http://koajs.com/
+[node_download]: http://blog.nodejs.org/2014/01/28/node-v0-11-11-unstable/
+[it_works]: /attachments/koajs.png "Koa.js It works"

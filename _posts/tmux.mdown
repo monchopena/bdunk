@@ -1,0 +1,48 @@
+Date: 12 May 2012
+Categories: systems, tools
+Summary: tmux is a terminal multiplexer: it enables a number of terminals (or windows), each running a separate program, to be created, accessed, and controlled from a single screen. tmux may be detached from a screen and continue running in the background, then later reattached.
+Read more: Show me more
+
+# Tmux: a terminal multiplexer
+
+[Tmux][tmux] is a really useful tool.
+
+You can install:
+
+> apt-get install tmux
+
+Then create a new config file:
+
+> touch ~/.tmux.conf
+
+A script for launch Tmux (file name testing.app):
+
+> source-file ~/.tmux.conf
+> 
+> new-session -s testing -n editor -d
+> 
+> clock-mode
+> 
+> split-window
+> 
+> send-keys -t testing:0 'tail -f /var/log/nginx/access.log' C-m
+> 
+> split-window
+> send-keys -t testing:0 'tail -f /var/log/nginx/error.log' C-m
+> 
+> selectp -t 0
+> 
+> split-window -h
+> 
+> send-keys -t testing:0 'htop' C-m
+
+Executing the script:
+
+> tmux -file testing.app attach
+
+An you can see:
+
+![Tmux Screenshot]
+
+[tmux]: http://tmux.sourceforge.net/
+[Tmux Screenshot]: /attachments/tmux.png "Tmux Screenshot"

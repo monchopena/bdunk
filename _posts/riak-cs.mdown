@@ -1,0 +1,234 @@
+Date: 26 Aug 2014
+Categories: systems
+Summary: Installing Riak CS and upload a file like S3 Amazon
+Read more: Show me more
+
+# Installing Riak CS
+
+[Riak CS][riak_cs] is simple, open source storage software built on top of Riak. You can use S3-compatible API and authentication.
+
+In Debian you can install:
+
+<pre><code>curl http://apt.basho.com/gpg/basho.apt.key | apt-key add -</code></pre>
+
+<pre><code>bash -c "echo deb http://apt.basho.com $(lsb_release -sc) main > /etc/apt/sources.list.d/basho.list"</code></pre>
+
+<pre><code>apt-get update</code></pre>
+
+Change ulimit in /etc/security/limits.conf:
+
+<pre><code>root soft nofile 65536
+root hard nofile 65536
+riak soft nofile 65536
+riak hard nofile 65536</code></pre>
+
+For tests do:
+
+<pre><code>ulimit -n 65536</code></pre>
+
+<pre><code>apt-get install riak stanchion riak-cs</code></pre>
+
+Change in /etc/riak/app.config:
+
+We need to set allow_mult to true. We can add this line to the riak_core section of app.config:
+
+<pre><code>{default_bucket_props, [{allow_mult, true}]},</code></pre>
+
+Replace 192.168.0.14 (this is my case) with the IP address or hostname for the Riak node.
+
+<pre><code>{riak_api, [
+    %% Other configs
+
+    {pb, [ {"192.168.0.14", 8087 } ]}
+
+    %% Other configs
+]}</code></pre>
+
+Uncomment:
+
+<pre><code>{pb_backlog, 64},</code></pre>
+
+Disable JavaScript MapReduce:
+
+<pre><code>{map_js_vm_count, 0 },
+            {reduce_js_vm_count, 0 },
+            {hook_js_vm_count, 0 },
+</code></pre>
+
+This:
+
+<pre><code>{riak_kv, [
+    %% Delete this line:
+    {storage_backend, riak_kv_bitcask_backend},
+]}</code></pre>
+
+For this:
+
+<pre><code>{add_paths, ["/usr/lib/riak-cs/lib/riak_cs-1.5.0/ebin"]},
+    {storage_backend, riak_cs_kv_multi_backend},
+    {multi_backend_prefix_list, [{<<"0b:">>, be_blocks}]},
+    {multi_backend_default, be_default},
+    {multi_backend, [
+        {be_default, riak_kv_eleveldb_backend, [
+            {max_open_files, 50},
+            {data_root, "/var/lib/riak/leveldb"}
+        ]},
+        {be_blocks, riak_kv_bitcask_backend, [
+            {data_root, "/var/lib/riak/bitcask"}
+        ]}
+    ]},
+</code></pre>
+
+And change in /etc/riak/vm.args
+
+<pre><code>-name riak@192.168.0.14</code></pre>
+
+Now we can test riak doing "riak start".
+
+Next we need to prepare /etc/stanchion/app.config and /etc/stanchion/vm.args, by the momment we only will change 127.0.0.1 by 192.168.0.14.
+
+Starting stanchion
+
+<pre><code>stanchion</code></pre>
+
+In /etc/riak-cs/app.config and /etc/riak-cs/vm.arg we'll change the IP.
+
+We must create one admin user so we change anonymous_user_creation to true:
+
+<pre><code>{anonymous_user_creation, true},</code></pre>
+
+This is a step very important:
+
+<pre><code>{cs_root_host, "debian.local"},</code></pre>
+
+
+Adding user admine
+
+<pre><code>curl -H 'Content-Type: application/json' \
+  -XPOST http://192.168.0.14:8080/riak-cs/user \
+  --data '{"email":"moncho@riak.com", "name":"moncho pena"}'</code></pre>
+
+
+
+Result sample
+
+<pre><code>{  
+   "email":"moncho@riak.com",
+   "name":"moncho pena"
+}{  
+   "email":"moncho@riak.com",
+   "display_name":"moncho",
+   "name":"moncho pena",
+   "key_id":"MKDIFS6YJEWINSN5FJSK",
+   "key_secret":"Rx9YKNfW3RiIOomLvh0O3ekrgnwg8GhxPIO4dg==",
+   "id":"23b3c6426216588d3e680eb6cbc76a7e93188e01aad3952e7b845710b89cc447",
+   "status":"enabled"
+}</code></pre>
+
+And we put in /etc/riak-cs/app.config and in /etc/stanchion/app.config this.
+
+<pre><code>{admin_key, "MKDIFS6YJEWINSN5FJSK"},
+           {admin_secret, "Rx9YKNfW3RiIOomLvh0O3ekrgnwg8GhxPIO4dg=="},
+</code></pre>
+
+Don't forget change this to false:
+
+<pre><code>{anonymous_user_creation, false},</code></pre>
+
+Restart services stanchion and riak-cs.
+
+
+Now let's install [S3cmd][s3cmd]:
+
+<pre><code>http://sourceforge.net/projects/s3tools/files/s3cmd/</code></pre>
+
+Download and unzip, then:
+
+<pre><code>python setup.py install</code></pre>
+
+Now install a dependence:
+
+<pre><code>apt-get install python-dateutil</code></pre>
+
+This is a sample config file /root.s3cfg:
+
+<pre><code>
+[default]
+access_key = MKDIFS6YJEWINSN5FJSK
+access_token = 
+add_encoding_exts = 
+add_headers = 
+bucket_location = US
+cache_file = 
+cloudfront_host = cloudfront.amazonaws.com
+default_mime_type = binary/octet-stream
+delay_updates = False
+delete_after = False
+delete_after_fetch = False
+delete_removed = False
+dry_run = False
+enable_multipart = True
+encoding = UTF-8
+encrypt = False
+expiry_date = 
+expiry_days = 
+expiry_prefix = 
+follow_symlinks = False
+force = False
+get_continue = False
+gpg_command = /usr/bin/gpg
+gpg_decrypt = %(gpg_command)s -d --verbose --no-use-agent --batch --yes --passphrase-fd %(passphrase_fd)s -o %(output_file)s %(input_file)s
+gpg_encrypt = %(gpg_command)s -c --verbose --no-use-agent --batch --yes --passphrase-fd %(passphrase_fd)s -o %(output_file)s %(input_file)s
+gpg_passphrase = cuchi
+guess_mime_type = True
+host_base = debian.local
+host_bucket = %(bucket)s.debian.local
+human_readable_sizes = False
+ignore_failed_copy = False
+invalidate_default_index_on_cf = False
+invalidate_default_index_root_on_cf = True
+invalidate_on_cf = False
+list_md5 = False
+log_target_prefix = 
+max_delete = -1
+mime_type = 
+multipart_chunk_size_mb = 15
+preserve_attrs = True
+progress_meter = True
+proxy_host = debian.local
+proxy_port = 8080
+put_continue = False
+recursive = False
+recv_chunk = 4096
+reduced_redundancy = False
+restore_days = 1
+secret_key = Rx9YKNfW3RiIOomLvh0O3ekrgnwg8GhxPIO4dg==
+send_chunk = 4096
+server_side_encryption = False
+simpledb_host = sdb.amazonaws.com
+skip_existing = False
+socket_timeout = 300
+urlencoding_mode = normal
+use_https = False
+use_mime_magic = True
+verbosity = WARNING
+website_endpoint = http://%(bucket)s.s3-website-%(location)s.amazonaws.com/
+website_error = 
+website_index = index.html
+</code></pre>
+
+Adding a bucket:
+
+<pre><code>s3cmd mb s3://images</code></pre>
+
+Uploading a file:
+
+<pre><code>s3cmd put --acl-public --guess-mime-type r2-d2.png s3://images</code></pre>
+
+And you can see the image here:
+
+<pre><code>http://debian.local:8080/images/r2-d2.png</code></pre>
+
+[riak_cs]: http://basho.com/riak-cloud-storage/
+[s3cmd]: http://s3tools.org/download
+[sample_s3cmd]: /attachments/s3cmd.png "S3cmd"

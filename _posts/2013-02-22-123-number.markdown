@@ -1,0 +1,82 @@
+---
+layout: post
+title:  "The Black Hole Number"
+Date:   2018-04-22 18:53:55 +0200
+categories: development
+Summary: A program in Node to compute Even, Odd, and Total Digits
+---
+
+# 123: The Black Hole Number
+
+- Start with any number, say 9288759
+- Count the number of even digits, the number of odd digits, the total number of digits.
+- You get 347
+- Repeat and you get 123
+- Repeat and you get 123
+- Repeat and you get 123
+- ...
+- Once you reach 123, you never get out, just as reaching a black hole in physics implies no escape.
+
+A simple program in Node JS to test:
+
+{% highlight javascript %}
+/*
+Moncho Pena
+2013-02-22
+*/
+var myargs = process.argv.slice(2);
+if (myargs[0]) {
+var number=myargs[0];
+number=stripAlphaChars(number);
+if (number=='') {
+number=0;
+}
+if (number<100) {
+console.log('Please use a number greater than 99');
+} else {
+console.log(number);
+var test=convert(number);
+while (test[3]!=123) {
+test=convert(test[3]);
+}
+}
+} else {
+console.log('Use: node 123.js number');
+}
+function stripAlphaChars(source) { 
+var out = source.replace(/[^0-9]/g, ''); 
+return out; 
+}
+function convert(number) {
+var numbers= new Array();
+var res= new Array();
+var pair=0;
+var odd=0;
+for (var i=0;i<number.length;i++) {
+var control=number.substr(i, 1);
+if ((control%2)==0) {
+pair++;
+} else {
+odd++;
+}
+}
+res[0]=pair;
+res[1]=odd;
+res[2]=number.length;
+var super_number=res[0].toString()+res[1].toString()+res[2].toString();
+console.log(super_number);
+res[3]=super_number;
+return res;
+}
+{% endhighlight %}
+
+Running:
+
+![123.js Screenshot]
+
+I've read this curiosity on [Gaussianos][gaussianos].
+
+[gaussianos]: http://gaussianos.com/una-curiosa-propiedad-del-123/
+[123.js Screenshot]: /attachments/123.png "123.js Screenshot"
+
+
