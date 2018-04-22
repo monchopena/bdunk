@@ -1,0 +1,9 @@
+_site
+.sass-cache
+.jekyll-metadata
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
