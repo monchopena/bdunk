@@ -3,11 +3,12 @@ layout: post
 title:  "Rdis using PHPRedis"
 date:   2012-05-20 00:00:00 +0200
 categories: development
-summary: tmux is a terminal multiplexer: Predis is a flexible and feature-complete PHP (>= 5.3) client library for the Redis key-value store.
+summary: "Predis is a flexible and feature-complete PHP (>= 5.3) client library for the Redis key-value store."
 ---
 
 My firsts steps with this PHP Library [Predis][predis]. Insert and show registers with [Redis][redis].
 
+{% highlight php %}
 	<?php
 	
 	//error_reporting(E_ALL);
@@ -107,7 +108,7 @@ My firsts steps with this PHP Library [Predis][predis]. Insert and show register
 	 
 	 </body>
 	</html>
-	
+{% endhighlight %}
 	
 [predis]: https://github.com/nrk/predis
 [redis]: http://redis.io/

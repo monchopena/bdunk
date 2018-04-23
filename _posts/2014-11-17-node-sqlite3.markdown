@@ -30,7 +30,8 @@ We'll put dabase into a dir.
 
 This is app.js code:
 
-<pre><code>var express = require('express');
+{% highlight javascript %}
+var express = require('express');
 var path = require('path');
 var favicon = require('static-favicon');
 var logger = require('morgan');
@@ -124,7 +125,7 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
-
+{% endhighlight %}
 
 module.exports = app;</code></pre>
 
@@ -132,21 +133,23 @@ First we started database going to http://localhost:3000/data/start.
 
 This is the template for view users (views/show.ejs):
 
-<pre><code>&lt;!DOCTYPE html&gt;
-  &lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;&lt;%= title %&gt;&lt;/title&gt;
-    &lt;link rel='stylesheet' href='/stylesheets/style.css' /&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;&lt;%= title %&gt;&lt;/h1&gt;
-    &lt;ul&gt;
-      &lt;% for(var i=0; i&lt;users.length; i++) {%&gt;
-        &lt;li&gt;&lt;%= users[i].name %&gt;&lt;/li&gt;
-      &lt;% } %&gt;
-    &lt;/ul&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+{% highlight html %}
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <ul>
+      <\% for(var i=0; i<users.length; i++) {\%>
+        <li><\%= users[i].name \%></li>
+      <\% } \%>
+    </ul>
+  </body>
+</html>
+{% endhighlight %}
 
 This is a very simple sample but it's a good start.
 
