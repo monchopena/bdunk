@@ -1,9 +1,10 @@
-Date: 8 May 2012
-Categories: systems, nginx
-Summary: Varnish does not support SSL. How can we solve this: with Nginx.
-Read more: Show me more
-
-# Varnish SSL
+---
+layout: post
+title:  "Varnish SSL"
+date:   2012-05-08 00:00:00 +0200
+categories: systems, nginx
+summary: Varnish does not support SSL. How can we solve this: with Nginx.
+---
 
 [Varnish][varnish-web] it makes your web site go faster and has good tools like "varnishlog". But there is a problem not supports SSL ([this is the official explanation][varnish-ssl]).
 

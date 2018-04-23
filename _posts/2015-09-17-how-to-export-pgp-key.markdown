@@ -1,9 +1,10 @@
-Date: 17 sep 2015
-Categories: systems
-Summary: If you need export your PGP keys you could use this commands.
-Read more: Show me more
-
-# How to export your PGP private Key to another computer
+---
+layout: post
+title:  "How to export your PGP private Key to another computer"
+date:   2015-09-17 00:00:00 +0200
+categories: systems
+summary: If you need export your PGP keys you could use this commands.
+---
 
 First of all: Do you have some private keys in your machine?
 

@@ -1,9 +1,10 @@
-Date: 26 Nov 2012
-Categories: development
-Summary: Using Markdown in Jade.
-Read more: Show me more
-
-# Using Markdown in Express
+---
+layout: post
+title:  "Using Markdown in Express"
+date:   2012-11-26 00:00:00 +0200
+categories: development
+summary: Using Markdown in Jade.
+---
 
 Ok. I'm a geek and I like [markdown]. I've been testing with Express and wanted to use [markdown].
 

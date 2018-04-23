@@ -1,9 +1,10 @@
-Date: 6 Jun 2014
-Categories: systems
-Summary: Installing redmine step by step
-Read more: Show me more
-
-# How to install redmine in Debian
+---
+layout: post
+title:  "How to install redmine in Debian"
+date:   2014-06-06 00:00:00 +0200
+categories: systems
+summary: Installing redmine step by step
+---
 
 [Redmine][redmine] is my favorite Project Managent Program.
 

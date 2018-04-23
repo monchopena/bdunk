@@ -1,9 +1,10 @@
-Date: 19 Feb 2017
-Categories: development
-Summary: How to use cache with node with a sample
-Read more: Show me more
-
-# Express.js, Wordrpress API and Cache
+---
+layout: post
+title:  "Express.js, Wordrpress API and Cache"
+date:   2017-02-19 00:00:00 +0200
+categories: development
+summary: How to use cache with node with a sample
+---
 
 This is a sample made with [express.js][express.js] and 2 libraries: [node-wpapi][node-wpapi] and [node-cache][node-cache].
 

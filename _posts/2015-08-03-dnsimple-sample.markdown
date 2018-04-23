@@ -1,9 +1,10 @@
-Date: 3 Aug 2015
-Categories: development
-Summary: An example how to update a register (IP) in Dnsimple.com
-Read more: Show me more
-
-# Updating a domain IP with Dnsimple when you have a Dinamyc IP
+---
+layout: post
+title:  "Updating a domain IP with Dnsimple when you have a Dinamyc IP"
+date:   2015-08-03 00:00:00 +0200
+categories: development
+summary: An example how to update a register (IP) in Dnsimple.com
+---
 
 I'm using [Dnsimple][dnsimple] because they have an API that works very well.
 

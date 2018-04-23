@@ -1,9 +1,10 @@
-Date: 28 Jan 2014
-Categories: php
-Summary: I explain step by step how compile PHP 5.5.8 on Mavericks OSX
-Read more: Show me more
-
-# Compiling PHP 5.5.8 on OSX Mavericks
+---
+layout: post
+title:  "Compiling PHP 5.5.8 on OSX Mavericks"
+date:   2014-01-28 00:00:00 +0200
+categories: php systems
+summary: I explain step by step how compile PHP 5.5.8 on Mavericks OSX
+---
 
 I assume you have installed [MacPorts][macports] or maybe [Homebrew][brew].
 

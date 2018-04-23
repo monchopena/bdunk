@@ -1,9 +1,10 @@
-Date: 2 Jun 2014
-Categories: systems
-Summary: If you want to avoid firewalls to teach your web from your computer this is your tutorial
-Read more: Show me more
-
-# Tunnel a local webserver to the Internet
+---
+layout: post
+title:  "Tunnel a local webserver to the Internet"
+date:   2014-06-02 00:00:00 +0200
+categories: systems
+summary: If you want to avoid firewalls to teach your web from your computer this is your tutorial
+---
 
 First: we need a server accessible from your computer by ssh, in this sample we use testing.wentook.com.
 

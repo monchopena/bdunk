@@ -1,9 +1,10 @@
-Date: 30 Apr 2012
-Categories: arduino
-Summary: A great video about Arduino.
-Read more: Show me more
-
-# Arduino video
+---
+layout: post
+title:  "Arduino video"
+date:   2012-04-30 00:00:00 +0200
+categories: arduino
+summary: A great video about Arduino.
+---
 
 The "Arduino Documentary" is the best video about Arduino.
 

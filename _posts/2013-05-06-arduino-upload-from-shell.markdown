@@ -1,9 +1,10 @@
-Date: 6 May 2013
-Categories: arduino
-Summary: Upload the firmware to a device from shell.
-Read more: Show me more
-
-# Arduino from shell
+---
+layout: post
+title:  "Arduino from shell"
+date:   2013-05-06 00:00:00 +0200
+categories: arduino
+summary: Upload the firmware to a device from shell.
+---
 
 If you want to upload a program to Arduino from the command line can be done with [inotool][inotool].
 

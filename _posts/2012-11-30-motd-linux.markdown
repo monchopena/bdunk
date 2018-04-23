@@ -1,9 +1,10 @@
-Date: 30 Nov 2012
-Categories: development
-Summary: When you work with many serves yo can get crazy about Where am I?
-Read more: Show me more
-
-# How to change prompt colour and motd
+---
+layout: post
+title:  "How to change prompt colour and motd"
+date:   2012-11-30 00:00:00 +0200
+categories: development
+summary: When you work with many serves yo can get crazy about Where am I?
+---
 
 When you work (hard) with many servers on terminal you need to distinguish them. The best way is.
 

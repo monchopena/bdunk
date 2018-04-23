@@ -1,9 +1,10 @@
-Date: 11 Feb 2013
-Categories: development
-Summary: A program in Processing that generates a random image
-Read more: Show me more
-
-# Every Possible Photograph in Processing
+---
+layout: post
+title:  "Every Possible Photograph in Processing"
+date:   2013-02-11 00:00:00 +0200
+categories: development processing
+summary: A program in Processing that generates a random image
+---
 
 I read in [Microsiervos][microsiervos] an interesting article about [Every Possible Photograph][every_possible_photograph].
 

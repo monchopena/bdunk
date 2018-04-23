@@ -1,9 +1,10 @@
-Date: 26 Aug 2014
-Categories: systems
-Summary: Installing Riak CS and upload a file like S3 Amazon
-Read more: Show me more
-
-# Installing Riak CS
+---
+layout: post
+title:  "Installing Riak CS"
+date:   2014-08-26 00:00:00 +0200
+categories: systems
+summary: Installing Riak CS and upload a file like S3 Amazon
+---
 
 [Riak CS][riak_cs] is simple, open source storage software built on top of Riak. You can use S3-compatible API and authentication.
 

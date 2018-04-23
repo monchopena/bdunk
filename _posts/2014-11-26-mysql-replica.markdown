@@ -1,9 +1,10 @@
-Date: 26 Nov 2014
-Categories: development
-Summary: How To Set Up Database Replication In MySQL
-Read more: Show me more
-
-# Mysql Database Replica
+---
+layout: post
+title:  "Mysql Database Replica"
+date:   2014-11-26 00:00:00 +0200
+categories: systems
+summary: How To Set Up Database Replication In MySQL
+---
 
 We start from two MySQL servers.
 

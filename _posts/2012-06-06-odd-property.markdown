@@ -1,13 +1,14 @@
-Date: 6 Jun 2012
-Categories: development
-Summary: A curious mathematical property.
-Read more: Show me more
-
-# The sum of a sequence of odd numbers gives you the sequence for the perfect squares
+---
+layout: post
+title:  "The sum of a sequence of odd numbers gives you the sequence for the perfect squares"
+date:   2012-06-06 00:00:00 +0200
+categories: development
+summary: A curious mathematical property.
+---
 
 Really? We can test with a simple PHP Code:
 
-	<?php
+<?php
 	
 	echo '<h1>The sum of a sequence of odd numbers gives you the sequence for the perfect squares</h1>';
 	

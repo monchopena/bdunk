@@ -1,9 +1,10 @@
-Date: 14 Apr 2015
-Categories: development
-Summary: Solved a problem with _escaped_fragment_ in browsers
-Read more: Show me more
-
-# Nginx Angular JS SEO with hashbang
+---
+layout: post
+title:  "Nginx Angular JS SEO with hashbang"
+date:   2015-04-14 00:00:00 +0200
+categories: development
+summary: Solved a problem with _escaped_fragment_ in browsers
+---
 
 We used [Prerender.io][prerender.io] for performance SEO in [Angular JS][angularjs]f. But we had a problem with [Facebook][facebook] because they save url link with [_escaped_fragment_][_escaped_fragment_] so when you navigate with a browser some "Angular things" don't work.
 

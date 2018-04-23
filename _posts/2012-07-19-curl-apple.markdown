@@ -1,9 +1,10 @@
-Date: 19 Jul 2012
-Categories: development
-Summary: With *curl* and *grep" I can send an email with the offer.
-Read more: Show me more
-
-# Sent an email when the iMac is at a specified price
+---
+layout: post
+title:  "Sent an email when the iMac is at a specified price"
+date:   2012-07-19 00:00:00 +0200
+categories: development
+summary: With *curl* i can obtain the temperature from Meteo Galicia.
+---
 
 The other day a friend asked me to let him know if I saw a special offer of iMac. I don't wanna be watching every little time so I made a script.
 

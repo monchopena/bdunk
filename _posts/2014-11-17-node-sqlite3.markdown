@@ -1,9 +1,10 @@
-Date: 17 Nov 2014
-Categories: node
-Summary: Testing SQLite3 in Node JS
-Read more: Show me more
-
-# SQLite3 in Node JS
+---
+layout: post
+title:  "SQLite3 in Node JS"
+date:   2014-11-17 00:00:00 +0200
+categories: systems
+summary: Testing SQLite3 in Node JS
+---
 
 I have a problem. I'm making an application for run over a [Raspberry PI][raspberrypi], I initially chose  [Mongo DB][mongodb] (I really like it!), but in a [Raspberry PI][raspberrypi] this program is slow.
 

@@ -1,10 +1,10 @@
-Date: 30 May 2015
-Categories: development, nginx
-Summary: Testing Moustache in Express.js
-Read more: Show me more
-
-# Express.js and Moustache
-
+---
+layout: post
+title:  "Express.js and Moustache"
+date:   2015-05-30 00:00:00 +0200
+categories: development nginx
+summary: Testing Moustache in Express.js
+---
 
 First intall [Express.js][express.js] generator:
 

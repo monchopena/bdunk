@@ -1,11 +1,12 @@
-Date: 22 Jun 2015
-Categories: systems
-Summary: How to compiling PHP
-Read more: Show me more
+---
+layout: post
+title:  "Compiling PHP 5.6.10"
+date:   2015-06-22 00:00:00 +0200
+categories: systems
+summary: How to compiling PHP
+---
 
-# Compiling PHP 5.6.10
-
-In a Debian 8 machine base.
+Into a Debian 8 machine base.
 
 <pre><code>cd /usr/local/src
 wget http://au1.php.net/get/php-5.6.10.tar.gz/from/this/mirror -O php-5.6.10.tar.gz

@@ -1,9 +1,10 @@
-Date: 09 Aug 2013
-Categories: php
-Summary: I explain step by step how install this bundle on Symfony 2
-Read more: Show me more
-
-# Installing FOS User Bundle in Symfony 2
+---
+layout: post
+title:  "Installing FOS User Bundle in Symfony 2"
+date:   2013-08-09 00:00:00 +0200
+categories: arduino
+summary: I explain step by step how install this bundle on Symfony 2
+---
 
 Recently I'm starting a project with Symfony. There is a very interesting bundle for managing users called [FOS User Bundle][fos user bunle].
 

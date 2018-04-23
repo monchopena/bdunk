@@ -1,9 +1,10 @@
-Date: 13 Sep 2016
-Categories: development
-Summary: I want to use Handelbars to show Posts from a Wordpress page
-Read more: Show me more
-
-# Access to Wordpress from Node.js
+---
+layout: post
+title:  "Access to Wordpress from Node.js"
+date:   2016-09-13 00:00:00 +0200
+categories: development
+summary: I want to use Handelbars to show Posts from a Wordpress page
+---
 
 First we will need access to a Wordpress (obviously).
 

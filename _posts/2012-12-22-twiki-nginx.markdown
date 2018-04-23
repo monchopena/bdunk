@@ -1,9 +1,10 @@
-Date: 22 Dec 2012
-Categories: development
-Summary: TWiki on Nginx a little HOWTO
-Read more: Show me more
-
-# TWiki on Nginx
+---
+layout: post
+title:  "TWiki on Nginx"
+date:   2012-12-22 00:00:00 +0200
+categories: development nginx
+summary: TWiki on Nginx a little HOWTO
+---
 
 I like [Twiki][twiki] and I love [Nginx][nginx]. Can they work together? Yes they can.
 

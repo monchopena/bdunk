@@ -1,9 +1,10 @@
-Date: 10 Jun 2012
-Categories: development
-Summary: I explain step by step how do I post an article on this website.
-Read more: Show me more
-
-# How to publish an article on this website
+---
+layout: post
+title:  "How to publish an article on this website"
+date:   2012-06-10 00:00:00 +0200
+categories: development
+summary: I explain step by step how do I post an article on this website.
+---
 
 First: I write the article in [*.mdown format][mdown page]. 
 

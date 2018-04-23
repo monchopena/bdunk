@@ -1,9 +1,10 @@
-Date: 05 May 2012
-Categories: systems, mysql
-Summary: MySQLTuner is a script written in Perl that will assist you with your MySQL configuration and make recommendations for increased performance and stability.
-Read more: Show me more
-
-# MySQL Tuner
+---
+layout: post
+title:  "MySQL Tuner"
+date:   2012-05-05 00:00:00 +0200
+categories: systems, mysql
+summary: MySQLTuner is a script written in Perl that will assist you with your MySQL configuration and make recommendations for increased performance and stability.
+---
 
 A powerful tool:
 

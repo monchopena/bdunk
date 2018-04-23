@@ -1,9 +1,10 @@
-Date: 30 Dec 2015
-Categories: systems
-Summary: I made tests over the same server with Apache HTTP server benchmarking tool with different technologies. And the winner is ...
-Read more: Show me more
-
-# What is fastest? HTML, Lua, Node.js, or PHP
+---
+layout: post
+title:  "What is fastest? HTML, Lua, Node.js, or PHP"
+date:   2015-12-30 00:00:00 +0200
+categories: systems
+summary: I made tests over the same server with Apache HTTP server benchmarking tool with different technologies. And the winner is ...
+---
 
 I installed in a server [OpenResty][openresty] and [PHP-FPM][php-fpm].
 

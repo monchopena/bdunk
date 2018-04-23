@@ -1,9 +1,10 @@
-Date: 25 Apr 2014
-Categories: systems, mongodb
-Summary: MongoDB simple replication 3 servers sample
-Read more: Show me more
-
-# MongoDB simple replicas
+---
+layout: post
+title:  "MongoDB simple replicas"
+date:   2014-04-25 00:00:00 +0200
+categories: systems, mongodb
+summary: MongoDB simple replication 3 servers sample
+---
 
 If you don't have [Mongo DB][mongodb_web] this is a good moment to install it. In Debian you can do it:
 

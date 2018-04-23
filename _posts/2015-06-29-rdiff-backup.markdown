@@ -1,9 +1,10 @@
-Date: 29 Jun 2015
-Categories: development
-Summary: Compiling rdiff-backup lastest version in Debian/Ubuntu
-Read more: Show me more
-
-# How to install latest version of Rdiff-Backup
+---
+layout: post
+title:  "How to install latest version of Rdiff-Backup"
+date:   2015-06-29 00:00:00 +0200
+categories: development
+summary: Compiling rdiff-backup lastest version in Debian/Ubuntu
+---
 
 Latest version is 1.3.3 and you can download from [this page][rdiff-backup].
 

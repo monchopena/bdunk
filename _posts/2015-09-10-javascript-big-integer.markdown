@@ -1,9 +1,10 @@
-Date: 10 sep 2015
-Categories: NodeJS
-Summary: Beware of big integers in Javascript
-Read more: Show me more
-
-# Big Integer and Javascript
+---
+layout: post
+title:  "Big Integer and Javascript"
+date:   2015-09-10 00:00:00 +0200
+categories: nodejs
+summary: Beware of big integers in Javascript
+---
 
 The other day I was testing the graphics library [D3.js][d3js] and wanted to represent the [Fibonacci][fibonacci] series.
 

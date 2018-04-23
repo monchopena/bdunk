@@ -1,9 +1,10 @@
-Date: 24 Jun 2012
-Categories: development
-Summary: With *curl* i can obtain the temperature from Meteo Galicia.
-Read more: Show me more
-
-# How to know the outside temperature
+---
+layout: post
+title:  "How to know the outside temperature"
+date:   2012-06-24 00:00:00 +0200
+categories: development
+summary: With *curl* i can obtain the temperature from Meteo Galicia.
+---
 
 From this web [meteogalicia] i can know the weather:
 

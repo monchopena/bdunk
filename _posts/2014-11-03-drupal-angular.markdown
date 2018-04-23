@@ -1,9 +1,10 @@
-Date: 3 Nov 2014
-Categories: systems
-Summary: First steps with Drupal and Angular JS
-Read more: Show me more
-
-# Drupal and AngularJS
+---
+layout: post
+title:  "Drupal and AngularJS"
+date:   2014-11-03 00:00:00 +0200
+categories: systems
+summary: First steps with Drupal and Angular JS
+---
 
 Do you have [drush][drush]?
 

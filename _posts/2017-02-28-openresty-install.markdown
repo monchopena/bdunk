@@ -1,9 +1,10 @@
-Date: 28 Feb 2017
-Categories: systems
-Summary: Firsts steps to work with OpenResty
-Read more: Show me more
-
-# OpenResty: How to install
+---
+layout: post
+title:  "OpenResty: How to install"
+date:   2017-02-28 00:00:00 +0200
+categories: systems
+summary: Firsts steps to work with OpenResty
+---
 
 I like [Lua][lua] and I like [Nginx][nginx] then is normal to try [OpenResty][openresty].
 

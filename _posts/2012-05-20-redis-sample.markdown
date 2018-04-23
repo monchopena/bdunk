@@ -1,9 +1,10 @@
-Date: 20 May 2012
-Categories: development
-Summary: Predis is a flexible and feature-complete PHP (>= 5.3) client library for the Redis key-value store.
-Read more: Show me more
-
-# Rdis using PHPRedis
+---
+layout: post
+title:  "Rdis using PHPRedis"
+date:   2012-05-20 00:00:00 +0200
+categories: development
+summary: tmux is a terminal multiplexer: Predis is a flexible and feature-complete PHP (>= 5.3) client library for the Redis key-value store.
+---
 
 My firsts steps with this PHP Library [Predis][predis]. Insert and show registers with [Redis][redis].
 

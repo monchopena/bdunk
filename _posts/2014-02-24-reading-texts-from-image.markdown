@@ -1,9 +1,10 @@
-Date: 24 Feb 2014
-Categories: systems, nodejs
-Summary: We took a photo to a written text and see it with an OCR program.
-Read more: Show me more
-
-# Reading texts from image
+---
+layout: post
+title:  "Reading texts from image"
+date:   2014-02-24 00:00:00 +0200
+categories: systems, nodejs
+summary: We took a photo to a written text and see it with an OCR program.
+---
 
 These last weeks in Wentook, my new venture in IOT, we are devoting much time to R&D. We are thinking about a possible product that is able to read a license plate from a webcam. This can be useful for instance in garages.
 

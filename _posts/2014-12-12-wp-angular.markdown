@@ -1,9 +1,10 @@
-Date: 12 Dec 2014
-Categories: development
-Summary: How to work with Wordpress like an API and Angular JS like a Frontend
-Read more: Show me more
-
-# WP Angular
+---
+layout: post
+title:  "WP Angular"
+date:   2014-12-12 00:00:00 +0200
+categories: development
+summary: How to work with Wordpress like an API and Angular JS like a Frontend
+---
 
 I did an Application in Angular JS based on this [template][template].
 

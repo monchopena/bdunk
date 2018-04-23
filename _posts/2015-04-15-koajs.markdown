@@ -1,9 +1,10 @@
-Date: 15 Apr 2014
-Categories: systems, nodejs
-Summary: Testing Koa.js
-Read more: Show me more
-
-# Testing new Node.js Framework called Koa.js
+---
+layout: post
+title:  "Testing new Node.js Framework called Koa.js"
+date:   2015-04-15 00:00:00 +0200
+categories: development
+summary: Testing Koa.js
+---
 
 In late twenty thirteen, the team behind [Express.js][expressjs_web] announced a new framework called [Koa][koa_web]. It uses some features that require an unstable dev version of Node.
 
