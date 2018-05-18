@@ -2,7 +2,7 @@
 layout: post
 title:  "Reading texts from image"
 date:   2014-02-24 00:00:00 +0200
-categories: systems, nodejs
+categories: systems nodejs
 summary: We took a photo to a written text and see it with an OCR program.
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Nginx Headers More"
 date:   2012-04-29 00:00:00 +0200
-categories: systems, nginx
+categories: systems nginx
 summary: Sometimes in some cases a customer asks us not to know that web server we are using. To avoid this in nginx is an extension called Headers More. This article will explain how to install.
 ---
 

@@ -1,0 +1,35 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+$primary-color: #168a32;
+$secondary-color: #19a03a;
+$blue-color: #027fc2;
+
+.logo {
+    width: 120px;
+}
+
+a {
+    color: $primary-color;  
+}
+
+a {
+    &:visited {
+        color: $primary-color;
+    }
+    &:hover {
+        color: $secondary-color;
+        text-decoration: none;
+    }
+}
+
+.post-list-heading {
+    color: $blue-color;
+}
+
+.post-title {
+    color: $blue-color;
+}

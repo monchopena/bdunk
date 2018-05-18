@@ -2,7 +2,7 @@
 layout: post
 title:  "MongoDB simple replicas"
 date:   2014-04-25 00:00:00 +0200
-categories: systems, mongodb
+categories: systems mongodb
 summary: MongoDB simple replication 3 servers sample
 ---
 

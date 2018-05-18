@@ -8,23 +8,21 @@ Hi! I'm Moncho Pena.
 
 ![moncho photo]
 
-I am currently working as CTO [Rebellion][rebellion].
+I am currently working as CTO in [Rebellion][rebellion].
 
-I was [Inforede][inforede] owner for 7 years. In 2010 I founded Bdunk.
+I'm a Fan [FLOSS][floss] and I really love [Arduino][arduino].
 
-I have also been active in [Agasol][agasol] and [ASOLIF][asolif] Associations.
+My greatest passion is programming: Javascript, PHP, Shell Scripts, Processing, Ruby, C#, ...
 
-I'm a Fan [FLOSS][floss]. I really love [Arduino][arduino].
-
-My biggest passion is programming: Javascript, C#, PHP, Shell Scripts, Processing, Ruby, ...
-
->On this new page I will write about things that I really like.
+> On this new page I will write about things that I really like.
 
 You can find me:
 
 - [Twitter][twitter]
 - [Google+][gplus]
 - [Linkedin][linkedin]
+- [Github][github]
+- [JavaScript Ourense][jsourense]
 
 [moncho photo]: /attachments/moncho.jpg "Moncho Pena Profile Photo"
 [inforede]: http://inforede.es
@@ -39,3 +37,5 @@ You can find me:
 [linkedin]: http://www.linkedin.com/in/ramonpena
 [codigo]: https://codigo.co.uk
 [rebellion]: https://rebellionpay.com/
+[github]: https://github.com/monchopena
+[jsourense]: http://ourense.javascript.gal/

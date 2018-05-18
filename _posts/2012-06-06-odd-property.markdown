@@ -8,6 +8,7 @@ summary: A curious mathematical property.
 
 Really? We can test with a simple PHP Code:
 
+```
 <?php
 	
 	echo '<h1>The sum of a sequence of odd numbers gives you the sequence for the perfect squares</h1>';
@@ -66,3 +67,4 @@ Really? We can test with a simple PHP Code:
 	}
 	
 	?>
+```
