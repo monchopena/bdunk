@@ -7,3 +7,9 @@ New Bdunk Page build in Jekyll.
 ```
 bundle exec jekyll serve
 ```
+
+# How to build
+
+```
+jekyll build
+```
