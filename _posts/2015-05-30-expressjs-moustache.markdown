@@ -61,9 +61,11 @@ app.set('view engine', 'mustache');
 
 Into directory 'views/templates' we create this file named 'index.mustache':
 
+```html
 <pre>
-&lt;p&gt;Welcome to {{title}}!&lt;/p&gt;
+<p>Welcome to {% raw %}{{title}}!{% endraw %}</p>
 </pre>
+```
 
 Go to http://localhost:3000 and see the resutl.
 
@@ -86,16 +88,19 @@ module.exports = router;
 
 And in file 'views/index.mustache':
 
-<pre>
-&lt;p&gt;Welcome to {{ title }}!&lt;/p&gt;
-&lt;ul&gt;
-{{#lusers}}
-&lt;li>{{name}} - {{so}}&lt;/li&gt;
-{{/lusers}}
-&lt;/ul&gt;
-</pre>
 
-Now is time to play with [{{ mustache }}][mustache]!
+
+```html
+<p>Welcome to {% raw %}{{ title }}{% endraw %}</p>
+<ul>
+{% raw %}{{#lusers}}{% endraw %}
+<li>{% raw %}{{name}}{% endraw %} - {% raw %}{{so}}{% endraw %}</li>
+{% raw %}{{/lusers}}{% endraw %}
+</ul>
+</pre>
+```
+
+Now is time to play with [\{\{ mustache \}\}][mustache]!
 
 
 [express.js]: http://expressjs.com/

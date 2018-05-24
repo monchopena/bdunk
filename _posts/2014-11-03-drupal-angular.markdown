@@ -102,7 +102,7 @@ The result:
 
 ![drupal_angular]
 
-I don't like work with Drupal's templates. I think this is a better way if you want a clean code.
+I don't like work with Drupal's templates and I think this could be a better way if you want a clean code.
 
 Cheers!
 

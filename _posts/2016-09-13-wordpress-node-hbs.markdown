@@ -37,7 +37,8 @@ Start the project:
 
 This is a sample of routes/index.js
 
-<pre><code>var express = require('express');
+```javascript
+var express = require('express');
 var router = express.Router();
 
 var wordpress = require( "wordpress" );
@@ -67,15 +68,18 @@ router.get('/', function(req, res, next) {
   
 });
 
-module.exports = router;</code></pre>
+module.exports = router;
+```
 
 And this is the hbs file /views/index.hbs
 
-<pre><code>&lt;h1&gt;{{title}}&lt;/h1&gt;
-{{#each posts}}
-&lt;h1&gt;{{title}}&lt;/h1&gt;
-&lt;p&gt;{{{content}}}&lt;/p&gt;
-{{/each}}</code></pre>
+```html
+<h1>{% raw %}{{title}}{% endraw %}</h2>
+{% raw %}{{#each posts}}{% endraw %}
+  <h2>{% raw %}{{title}}{% endraw %}</h2>
+  <p>{% raw %}{{{content}}}{% endraw %}</p>
+{% raw %}{{/each}}{% endraw %}
+```
 
 Go to [http://localhost:3000][localhost] and see the result.
 

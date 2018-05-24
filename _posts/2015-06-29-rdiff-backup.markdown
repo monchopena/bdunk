@@ -13,18 +13,18 @@ wget http://savannah.nongnu.org/download/rdiff-backup/rdiff-backup-1.3.3.tar.gz
 tar -xzvf rdiff-backup-1.3.3.tar.gz
 cd rdiff-backup-1.3.3
 python setup.py install
-</code></pre>
+</pre>
 
 If you see an error with “_librsyncmodule.c” you have to install this dependence:
 
-<pre><code class=“ruby”>apt-get install -y librsync-dev
-</code></pre>
+<pre>apt-get install -y librsync-dev
+</pre>
 
 Sample Script for copies:
 
-<pre><code class=“ruby”>/opt/local/bin/rdiff-backup —remote-schema “ssh -C -p2223 %s rdiff-backup —server” root@YOUR_REMOTE_IP::/data/mysql/ /Volumes/SERVERS/mycopies/dbs
+<pre>/opt/local/bin/rdiff-backup —remote-schema “ssh -C -p2223 %s rdiff-backup —server” root@YOUR_REMOTE_IP::/data/mysql/ /Volumes/SERVERS/mycopies/dbs
 /opt/local/bin/rdiff-backup —force —remove-older-than 2W /Volumes/SERVERS/mycopies/dbs
-</code></pre>
+</pre>
 
 
 

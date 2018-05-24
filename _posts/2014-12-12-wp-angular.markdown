@@ -6,7 +6,7 @@ categories: development
 summary: How to work with Wordpress like an API and Angular JS like a Frontend
 ---
 
-I did an Application in Angular JS based on this [template][template].
+I made an Application in Angular JS based on this [template][template].
 
 Because is a Blog I wanted to use Wordpress like an API.
 
