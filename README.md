@@ -13,3 +13,7 @@ bundle exec jekyll serve
 ```
 jekyll build
 ```
+
+# RSYNC sample
+
+rsync -a _site/ bdunk@bdunk:/data/webs/bdunk.com
