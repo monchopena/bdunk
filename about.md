@@ -10,11 +10,9 @@ Hi! I'm Moncho Pena.
 
 I am currently working as CTO in [Rebellion][rebellion].
 
-I'm a Fan [FLOSS][floss] and I really love [Arduino][arduino].
+I'm a [FLOSS][floss] Fan and I really love [Arduino][arduino].
 
 My greatest passion is programming: Javascript, PHP, Shell Scripts, Processing, Ruby, C#, ...
-
-> On this new page I will write about things that I really like.
 
 You can find me:
 
