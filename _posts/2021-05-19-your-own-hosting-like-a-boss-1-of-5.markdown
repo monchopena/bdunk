@@ -20,7 +20,7 @@ First of all you can find the files used in this article [here][githubRepo].
 
 [How to install Terraform][howToInstallTerraform].
 
-Let's take a 👀    to the [main file][mainFile].
+Let's take a 👀 to the [main file][mainFile].
 
 I'm using DO but you could do it with other provider.
 
