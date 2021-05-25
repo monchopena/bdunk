@@ -2,7 +2,7 @@
 layout: post
 title:  "Your own hosting like a boss (2 of 5)"
 date:   2021-05-24 00:00:00 +0200
-categories: hosting, portainer, docker
+categories: hosting portainer docker
 summary: Second step. Docker Swarm configuration and how to deploy Portainer.
 ---
 

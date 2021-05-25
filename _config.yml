@@ -18,12 +18,12 @@ title: bdunk
 description: >- # this means to ignore newlines until "baseurl:"
   Moncho Pena's Personal Blog
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://bdunk.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: monchopena
 github_username:  monchopena
 author: Moncho
 show_excerpts: true
-footer_text: 2018 Bdunk
+footer_text: 2021 Bdunk
 
 # Build settings
 markdown: kramdown

@@ -2,7 +2,7 @@
 layout: post
 title:  "Your own hosting like a boss (1 of 5)"
 date:   2021-05-19 00:00:00 +0200
-categories: hosting, portainer, docker
+categories: hosting portainer docker
 summary: The first step. Creating the server with Terraform
 ---
 
