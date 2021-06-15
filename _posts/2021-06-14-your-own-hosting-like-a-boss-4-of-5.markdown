@@ -8,7 +8,7 @@ summary: Fourth step. How to deploy.
 
 We are going to use the [repository of this webpage][bdunk] and [GitHub Actions][github-actions].
 
-First we need to create an Environment and 3 secrets:
+First we need to create 3 repository secrets:
 
 - REGISTRY_USER: the registry user
 - REGISTRY_PASS: the password for registry
@@ -16,7 +16,7 @@ First we need to create an Environment and 3 secrets:
 
 ![environment-secrets]
 
-Create a new file for the Actions Definition.
+Create a new file for the Actions Definition [like this][github-actions-file].
 
 ```
 name: Testing the Actions with Jekyll
@@ -72,4 +72,4 @@ jobs:
 [bdunk]: https://github.com/monchopena/bdunk
 [github-actions]: https://github.com/features/actions
 [environment-secrets]: /attachments/environment-secrets.png "Environment secrets"
-
+[github-actions-file]: https://github.com/monchopena/bdunk/blob/master/.github/workflows/jekyll.yml
