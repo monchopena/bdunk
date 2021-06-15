@@ -36,7 +36,7 @@ jobs:
       with:
         push: true
         context: .
-        tags: moncho/bdunk-web:latest
+        tags: registry.contabo.bdunk.com/moncho/bdunk-web:latest
     
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
