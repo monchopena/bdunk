@@ -1,0 +1,2 @@
+FROM nginx
+COPY /srv/jekyll /usr/share/nginx/html
