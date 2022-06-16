@@ -293,7 +293,7 @@ And now the last thing. We are going to run a new server with docker and connect
 moncho@debianita:~$ docker swarm join-token worker
 To add a worker to this swarm, run the following command:
 
-    docker swarm join --token SWMTKN-1-2bhox6wyhnmvsjftib0eaqsdc5yceyq79au65r83v1ymy41hth-2gmlh08bjopvtl711oi19gicy 192.168.0.94:2377
+    docker swarm join --token [here_the_huge_token] 192.168.0.94:2377
 
 ```
 
