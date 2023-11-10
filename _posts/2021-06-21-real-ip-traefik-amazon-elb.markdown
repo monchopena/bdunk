@@ -129,9 +129,7 @@ For the CLI:
 --entryPoints.websecure.proxyProtocol.trustedIPs=10.1.4.0/24,10.1.5.0/24,10.1.6.0/24
 ```
 
-Note: if you want to now the ranges use [this-page][ipaddressguide]
-
-![cdri-page]
+Note: if you want to now the ranges use [ipaddressguide][this-page-ips]
 
 Ok. If now we do the curl ...
 
@@ -158,5 +156,4 @@ You got the REAL IP!
 [proxy-protocol]: https://www.haproxy.org/download/2.0/doc/proxy-protocol.txt
 [tcp-elb-amazon]: /attachments/tcp-elb-amazon.png "TCP ELB Amazon"
 [subnet-cidr]: /attachments/subnet-cidr.png "Subnet CDIR"
-[cdri-page]: /attachments/subnet-cidr.png "CDIR Page"
-[this-page]: https://www.ipaddressguide.com/cidr
+[this-page-ips]: https://www.ipaddressguide.com/cidr
